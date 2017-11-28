@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.thinkmobiles.android.sdk.easyqa.EasyQA;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
@@ -14,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EasyQA.install(this, "project token");
         setContentView(R.layout.activity_main);
 
         // ボタンを設定
